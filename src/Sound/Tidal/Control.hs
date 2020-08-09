@@ -165,7 +165,7 @@ example the following will cut the bev sample into 32 parts, but each
 will be 1/16th of a sample long:
 
 @
-d1 $ slow 32 $ striateBy 32 (1/16) $ sound "bev"
+d1 $ slow 32 $ striateBy 32 (1/16) $ sound "bev"  
 @
 
 Note that `striate` uses the `begin` and `end` parameters

@@ -544,7 +544,6 @@ run =
         let res = queryArc (stripContext $ compressArc (Arc 0.2 0.8) p) (Arc 0 1)
         let expected = fmap toEvent [(((1%5, 1%2), (1%5, 1%2)), 3%1), (((1%2, 13%20), (1%2, 13%20)), 3%1), (((13%20, 4%5), (13%20, 4%5)), 4%1)]
         property $ expected === res
-        
 
     -- pending "Sound.Tidal.Pattern.eventL" $ do
     --  it "succeeds if the first event 'whole' is shorter" $ do

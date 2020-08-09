@@ -66,6 +66,9 @@ pF name = fmap (Map.singleton name . (flip VF) Nothing)
 pI :: String -> Pattern Int -> ControlPattern
 pI name = fmap (Map.singleton name . (flip VI) Nothing)
 
+pR :: String -> Pattern Rational -> ControlPattern
+pR name = fmap (Map.singleton name . VR)
+
 pS :: String -> Pattern String -> ControlPattern
 pS name = fmap (Map.singleton name . (flip VS) Nothing)
 
@@ -170,8 +173,8 @@ cutoffegint = pF "cutoffegint"
 decay :: Pattern Double -> ControlPattern
 decay = pF "decay"
 -- | a pattern of numbers from 0 to 1. Sets the level of the delay signal.
-delay :: Pattern Double -> ControlPattern
-delay = pF "delay"
+delay :: Pattern Rational -> ControlPattern
+delay = pR "delay"
 -- | a pattern of numbers from 0 to 1. Sets the amount of delay feedback.
 delayfeedback :: Pattern Double -> ControlPattern
 delayfeedback = pF "delayfeedback"
